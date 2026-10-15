@@ -51,9 +51,9 @@ const YEARLY_MEMORIES = [
         image: "https://lh3.googleusercontent.com/d/1hec4sPMjGNUmQUqqASWwP01q2DGcu_a4=s1000"
       },
       {
-        title: "Togang Magkasangga",
+        title: "Paboritong Biyaya",
         date: "Year 2 - Memory 3",
-        story: "Nung mga panahong sobrang hirap at wala talaga akong maipagmalaki o maipang-gastos sa school, hindi mo pinaramdam sa akin na walang-wala ako. Sinalo mo ako sa lahat. Ibinigay mo parin kahit na mawawalan ka din para lang hindi ako mahirapan. Kung wala ka noon, baka hindi ko naipaglaban 'yung pag-aaral ko dahil sa mga gastosin. Nung mga panahong iyon, narealize ko na hindi lang pala basta girlfriend ang binigay sa akin ng diyos kundi isang babaeng handa akong salohin or damayan ako sa mga araw na nahihirapan ako. Sobrang laki ng utang na loob ko sa 'yo, at pangarap kong ibigay sa 'yo ang buong mundo bilang bawi sa lahat ng ibinigay mo para sa akin, Kaya ayon, sobrang saya kasi sa larawang ito, dalawa tayong nakasuot ng togang saksi kung paano mo ako binuo at hindi binitawan nung mga panahong gipit na gipit ang buhay ko.",
+        story: "Nung mga panahong sobrang hirap at wala talaga akong maipagmalaki o maipang-gastos sa school, hindi mo pinaramdam sa akin na walang-wala ako. Sinalo mo ako sa lahat. Ibinigay mo parin kahit na mawawalan ka din para lang hindi ako mahirapan. Kung wala ka noon, baka hindi ko naipaglaban 'yung pag-aaral ko dahil sa mga gastosin. Nung mga panahong iyon, narealize ko na hindi lang pala basta partner ang binigay sa akin ng diyos kundi isang babaeng handa akong salohin or damayan ako sa mga araw na nahihirapan ako. Sobrang laki ng utang na loob ko sa 'yo, at pangarap kong ibigay sa 'yo ang buong mundo bilang bawi sa lahat ng ibinigay mo para sa akin, Kaya ayon, sobrang saya kasi sa larawang ito, dalawa tayong nakasuot ng togang saksi kung paano mo ako tinulongan at hindi binitawan nung mga panahong gipit na gipit ang buhay ko.",
         image: "https://lh3.googleusercontent.com/d/1mYRgxxFODc020a4DWIgPt7AaY9GZvWqW=s1000"
       }
     ]
@@ -63,13 +63,13 @@ const YEARLY_MEMORIES = [
     yearSubtitle: "Ang Patuloy na Pagmamahal",
     memories: [
       {
-        title: "Para sa matatamis mong ngiti",
+        title: "Para sa Matatamis Mong Ngiti",
         date: "Year 3 - Memory 1",
-        story: "Isa 'to sa mga paborito kong core memories ngayong nag 3 years tayo! Haha! Ito kasi 'yung araw na sobrang natuwa ka kasi inakala mong wala akong maibibigay sa 'yo. Pwes, maling-mali ka roon! Katulad ng naitatak ko na sa puso at isip ko mula simula: handa kitang pasayahin sa abot ng makakaya ko, at handa kong paghirapan ang lahat makuha lang 'yang matatamis mong ngiti.",
+        story: "Isa 'to sa mga paborito kong core memories ngayong nag 3 years tayo!Ito kasi 'yung araw na sobrang natuwa ka kasi inakala mong wala akong maibibigay sa 'yo. Pwes, maling-mali ka roon! Katulad ng naitatak ko na sa puso at isip ko mula simula: handa kitang pasayahin sa abot ng makakaya ko, at handa kong paghirapan ang lahat makuha lang 'yang matatamis mong ngiti.",
         image: "https://lh3.googleusercontent.com/d/1QRLja-7bxyzMWDrLSc7WuZS7EZYqbFW_=s1000"
       },
       {
-        title: "Simple Days equal Happy",
+        title: "Ikaw Lamang",
         date: "Year 3 - Memory 2",
         story: "Kahit gaano pa kahirap o kahit pahirapan mo pa ako, hindi ako mapapagod. Basta't nakikita kong masaya ka sa piling ko, sapat na 'yun para ipaglaban kita nang paulit-ulit. Sa 'yo lang ako magiging ganito, at sa 'yo lang ako hindi susuko kailanman.",
         image: "https://lh3.googleusercontent.com/d/1W2XSgM9lmJlI_-ZH5_kOQpc5F8Yj8i7v=s1000"
@@ -92,7 +92,6 @@ export default function App() {
   const [currentYearIndex, setCurrentYearIndex] = useState(0);
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
 
-  // AI CAMERA DETECTION STATES
   const [cameraActive, setCameraActive] = useState(false);
   const [kissDetected, setKissDetected] = useState(false);
   const [cameraError, setCameraError] = useState("");
@@ -214,7 +213,7 @@ export default function App() {
           // Threshold for kiss/closeness detection (approx < 0.18 normalized space)
           if (distance < 0.18) {
             setKissDetected(true);
-            setFaceCountStatus("💋 KISS DETECTED! UNLOCKING GIFT...");
+            setFaceCountStatus("KISS DETECTED! UNLOCKING GIFT...");
             stopCamera();
             return; // Stop detection loop
           }
@@ -546,7 +545,7 @@ export default function App() {
                 >
                   <span>
                     {currentYearIndex === 2 && currentCardIndex === 2
-                      ? "Special AI Camera Gift"
+                      ? "Special Gift For You"
                       : currentCardIndex === 2
                         ? `Proceed to Year ${currentYearIndex + 2}`
                         : "Next Photo"}
